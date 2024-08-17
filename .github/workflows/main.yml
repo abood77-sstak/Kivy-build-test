@@ -23,12 +23,10 @@ jobs:
           export JAVA_HOME=/usr/lib/jvm/temurin-17-jdk-amd64
           sudo update-java-alternatives --set ${JAVA_HOME}
           export PATH=$JAVA_HOME/bin:$PATH
-          yes | buildozer -v android debug mv bin/*.apk $GITHUB_WORKSPACE
+          yes | buildozer -v android debug
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: sender
-          path: $GITHUB_WORKSPACE/*.apk
-
-
+          name: mysendr
+          path: bin/*.apk
