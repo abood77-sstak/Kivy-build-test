@@ -21,4 +21,4 @@
            run: pip install -r requirements.txt
 
          - name: Zip files
-           run: python test_bot.py￼Enter
+           run: python test_bot.py
