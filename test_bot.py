@@ -18,11 +18,15 @@ def web_driver():
 my_token = "6517080417:AAHQx2gxkQ5Sxs2GilTyCaOI4-jJZfIGaho"
 chat_id =7031532556
 bot = telebot.TeleBot(my_token)
-for i in range(5):
+for i in range(1):
   driver = web_driver()
   driver.get("https://google.com")
   sleep(5)
   photo = driver.save_screenshot("screenshot.png")
   with open("screenshot.png", "rb") as photo:
    bot.send_photo(chat_id, photo)
+  import subprocess
+
+  p1= subprocess.run("ls", shell=True, text=True, capture_output=True) 
+  bot.send_message(chat_id, str(p1.stdout))
   driver.quit()
