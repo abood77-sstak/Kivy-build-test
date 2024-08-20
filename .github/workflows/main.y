@@ -28,5 +28,5 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: mysendr
+          name: package
           path: bin/*.apk
