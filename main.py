@@ -1,4 +1,4 @@
-import sys
+
 import pygame
 #from pygame.locals import *
  ##################################
@@ -19,7 +19,7 @@ while True:
     for ev in pygame.event.get():
         if ev.type == pygame.QUIT:
             pygame.quit()
-            sys.exit()
+            
     clock.tick(60)
     surface.fill((0, 0, 0))
     ballrect = ballrect.move(speed)
